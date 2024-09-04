@@ -1,0 +1,38 @@
+# kedro
+kedro~=0.19.6
+kedro-datasets>=3.0; python_version >= "3.9"
+kedro-datasets>=1.0; python_version < "3.9"
+cookiecutter==2.6
+kedro-telemetry>=0.3.1
+kedro-viz>=6.7.0
+
+# further pre-installed packages
+ipython>=8.10
+jupyterlab>=3.0
+notebook
+pytest~=7.2
+pytest-cov~=3.0
+pytest-mock>=1.7.1, <2.0
+ruff~=0.1.8
+setuptools; python_version >= "3.12"
+
+
+# aws secrets manager
+aws_secretsmanager_caching==1.1.2
+
+# for parquet support
+pyarrow~=15.0.0
+# for spark data ingestion
+pyspark==3.5.0
+hdfs~=2.7.3
+
+# engine for Athena Pandas SQL Connection
+pyathena~=2.25.0
+PyAthenaJDBC>1.0.9
+SQLAlchemy <2.0.0
+
+# for s3 connection
+s3fs~=2023.12.2
+
+# general packages for nodes
+pandas<2.0.0

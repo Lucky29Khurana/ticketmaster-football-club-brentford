@@ -1,0 +1,5 @@
+s3_bucket_name: 'psi-dev-data'
+client_name: 'brentford'
+env_bucket: 'psi-dev'
+region: 'eu-west-2'
+client_type: 'football_club'

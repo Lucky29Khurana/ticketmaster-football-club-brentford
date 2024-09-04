@@ -1,0 +1,5 @@
+s3_bucket_name: 'psi-test-data'
+client_name: 'brentford'
+env_bucket: 'psi-test'
+region: 'eu-west-2'
+client_type: 'football_club'

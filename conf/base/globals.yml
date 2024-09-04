@@ -1,0 +1,4 @@
+s3_bucket_name: 'default-mock-bucket'
+client_name: 'brentford'
+env_bucket: 'mock-env-bucket'
+region: 'mock-region'

@@ -1,0 +1,21 @@
+# 02_INTERMEDIATE
+
+formatted_transactions_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_transactions_df.parquet
+
+formatted_members_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_members_df.parquet
+
+formatted_event_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_event_df.parquet
+
+formatted_season_card_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_season_card_df.parquet
+
+formatted_ticketscan_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_ticketscan_df.parquet

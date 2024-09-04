@@ -1,0 +1,35 @@
+ingestion_params:
+
+  client_type: 'football_club'
+  client_name: 'brentford'
+  client_athena_name: 'Brentford F.C.'
+  client_wyscout_name: 'Brentford'
+  client_wyscout_id: '1669'
+  s3_staging_dir: 's3://${globals:env_bucket}/Athena_Output/'
+
+  additional_events_filter_keywords: [
+         'CAT',
+         'Other',
+         'TEST',
+         'Test',
+         'TNT',
+         'Fans',
+         'Christmas',
+         'Women',
+         'Invitational',
+         'Show',
+         'Parking',
+         'Restaurant',
+         'Dining',
+         'Ballot',
+         'Coach',
+         'U18',
+         'Overseas',
+         'Lucky Dip'
+  ]
+
+  hospitality_match_ids: []
+
+  season_ticket_event_ids:
+    2023: 72
+    2024: 326
