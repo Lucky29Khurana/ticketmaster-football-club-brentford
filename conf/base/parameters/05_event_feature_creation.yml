@@ -1,0 +1,128 @@
+efc_params:
+  # params for creating venue features
+  # TODO: Add min distance to identify a given fixture as local derby
+  min_local_derby_distance:
+
+  # params for creating timeslot and clash features
+  # TODO: Add time in hours within which clashing fixtures need to be identified
+  fixture_clash_window:
+  # TODO: Add dict to identify clashing fixtures, check example below
+  fixture_clash_dict:
+
+  # Example - fixture_clash_dict
+  # fixture_clash_dict:
+  #  'key1':
+  #    - 'team_area_name',
+  #    - ['England'],
+  #    - ['UEFA European Championship', 'UEFA Europa League'],
+  #    - 'english_european_clash',
+  #
+  #  'key2':
+  #  - 'team_name',
+  #  - ['Aston Villa'],
+  #  - ['UEFA European Championship', 'UEFA Europa League', 'Premiership', 'FA Cup'],
+  #  - 'aston_villa_clash'
+
+  # params for creating interest index features
+  # TODO: Add entity_sport_name for desired interest index entity
+  interest_index_entity_sport_name:
+  # TODO: Add country_name for desired interest index country to interest
+  interest_index_country_name:
+  # TODO: Add time_period for desired interest index time period
+  interest_index_time_period:
+
+  # params for loading pre match ratings data from Athena
+  # TODO: Add desired competition_area_name, can be referred from football.vw_euro_match_level_elos
+  competition_area_name:
+
+  # params for creating rolling pre match forecast features
+  # TODO: start date for creating rolling window forecast
+  rolling_window_start_date:
+
+  # params for creating weather features data
+  # TODO: time in hours within the kick off time for which weather data needs to be extracted
+  weather_ko_window:
+
+  # params for extracting venue locations data from Athena
+  #TODO: Add relevant entity_sport_id, can be referred from sigma.team_venue_locations
+  venue_locations_entity_sport_id:
+  #TODO: Add relevant country_name, can be referred from sigma.team_venue_locations
+  venue_locations_country_name:
+  #TODO: Select from below as per sport team, add new if required
+  wiki_to_fixtures_data_team_names:
+
+  # for club football use following, add new mapping if required
+
+  #  wiki_to_fixtures_data_team_names:
+  #    Barnsley: Barnsley
+  #    Birmingham: Birmingham City
+  #    Blackburn: Blackburn Rovers
+  #    Blackpool: Blackpool
+  #    Bournemouth: Bournemouth
+  #    Brentford: Brentford
+  #    Bristol City: Bristol City
+  #    Burnley: Burnley
+  #    Burton: Burton Albion
+  #    Bolton: Bolton Wanderers
+  #    Cardiff: Cardiff City
+  #    Cambridge: Cambridge United
+  #    Charlton: Charlton Athletic
+  #    Cheltenham: Cheltenham Town
+  #    Colchester: Colchester United
+  #    Coventry: Coventry City
+  #    Crawley: Crawley Town
+  #    Derby: Derby County
+  #    Exeter: Exeter City
+  #    Forest Green: Forest Green Rovers
+  #    Fulham: Fulham
+  #    Huddersfield: Huddersfield Town
+  #    Hull: Hull City
+  #    Ipswich: Ipswich Town
+  #    Leeds: Leeds United
+  #    Leicester: Leicester City
+  #    Lincoln: Lincoln City
+  #    Luton: Luton Town
+  #    Mansfield: Mansfield Town
+  #    Middlesbrough: Middlesbrough
+  #    Millwall: Millwall
+  #    Northampton: Northampton Town
+  #    Norwich: Norwich City
+  #    Nottingham Forest: Nottingham Forest
+  #    Peterborough: Peterborough United
+  #    Plymouth: Plymouth Argyle
+  #    Preston: Preston North End
+  #    QPR: Queens Park Rangers
+  #    Reading: Reading
+  #    Rotherham: Rotherham United
+  #    Sheffield United: Sheffield United
+  #    Sheffield Wednesday: Sheffield Wednesday
+  #    Southampton: Southampton
+  #    Stoke: Stoke City
+  #    Stockport: Stockport County
+  #    Sunderland: Sunderland
+  #    Swansea: Swansea City
+  #    Watford: Watford
+  #    West Brom: West Bromwich Albion
+  #    Wigan: Wigan Athletic
+  #    Wycombe: Wycombe Wanderers
+
+
+  # for club_rugby use following, add new mapping if required
+
+  #  wiki_to_fixtures_data_team_names:
+  #    'london irish': 'london irish',
+  #    'sale': 'sale sharks',
+  #    'saracens': 'saracens',
+  #    'bath': 'bath rugby',
+  #    'exeter': 'exeter chiefs',
+  #    'gloucester': 'gloucester rugby',
+  #    'edinburgh': 'edinburgh rugby',
+  #    'ospreys': 'ospreys',
+  #    'scarlets': 'scarlets',
+  #    'bristol': 'bristol bears',
+  #    'harlequins': 'harlequins',
+  #    'newcastle': 'newcastle falcons',
+  #    'leicester': 'leicester tigers',
+  #    'northampton': 'northampton saints',
+  #    'lyon': 'lyon o.u.',
+  #    'connacht': 'connacht rugby'
