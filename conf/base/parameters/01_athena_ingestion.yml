@@ -5,7 +5,12 @@ ingestion_params:
   client_athena_name: 'Brentford F.C.'
   client_wyscout_name: 'Brentford'
   client_wyscout_id: '1669'
-  s3_staging_dir: 's3://${globals:env_bucket}/Athena_Output/'
+  s3_bucket_name: '${globals:s3_bucket_name}'
+  s3_staging_dir: 's3://${globals:s3_bucket_name}/Athena_Output/'
+  snowflake_region: 'eu-west-2'
+  snowflake_secret_key: 'snowflake'
+  competition_name:
+    - 'Premier League'
 
   additional_events_filter_keywords: [
          'CAT',
