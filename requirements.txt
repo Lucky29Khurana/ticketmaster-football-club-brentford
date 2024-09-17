@@ -32,7 +32,7 @@ PyAthenaJDBC>1.0.9
 SQLAlchemy <2.0.0
 
 # for s3 connection
-s3fs~=2023.12.2
+s3fs==2023.12.2
 
 # general packages for nodes
 pandas<2.0.0
