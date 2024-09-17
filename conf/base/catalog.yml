@@ -1,12 +1,16 @@
-# 02_INTERMEDIATE
+# Athena Ingestion
+
+fixtures_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/fixtures_df.parquet
 
 formatted_transactions_df:
   type: pandas.ParquetDataset
   filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_transactions_df.parquet
 
-formatted_members_df:
+members_df:
   type: pandas.ParquetDataset
-  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_members_df.parquet
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/members_df.parquet
 
 formatted_event_df:
   type: pandas.ParquetDataset
@@ -19,3 +23,72 @@ formatted_season_card_df:
 formatted_ticketscan_df:
   type: pandas.ParquetDataset
   filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/02_intermediate/formatted_ticketscan_df.parquet
+
+# Ticket Event Aggregation
+
+aggregated_sales_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/03_primary/ticket_sales/aggregated_sales_df.parquet
+
+aggregated_price_level_sales_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/03_primary/ticket_sales/aggregated_price_level_sales_df.parquet
+
+
+# TODO: check following entries are required
+#---
+home_fixtures_home_fans_aggregated_sales_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/03_primary/ticket_sales/home_fixtures_home_fans_aggregated_sales_df.parquet
+
+home_fixtures_away_fans_total_sales_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/03_primary/ticket_sales/home_fixtures_away_fans_total_sales_df.parquet
+
+away_fixtures_aggregated_sales_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/03_primary/ticket_sales/away_fixtures_aggregated_sales_df.parquet
+#---
+
+# Event Feature Creation
+
+athena_venue_locations_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/athena_venue_locations_df.parquet
+
+formatted_daily_event_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/formatted_daily_event_df.parquet
+
+venue_features_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/venue_features_df.parquet
+
+timeslot_and_clash_features_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/timeslot_and_clash_features_df.parquet
+
+historical_matches_played_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/historical_matches_played_df.parquet
+
+interest_index_features_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/interest_index_features_df.parquet
+
+rolling_pre_match_forecast_features_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/rolling_pre_match_forecast_features_df.parquet
+
+all_teams_rolling_pre_match_ratings_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/all_teams_rolling_pre_match_ratings_df.parquet
+
+weather_features_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/weather_features_df.parquet
+
+daily_event_features_df:
+  type: pandas.ParquetDataset
+  filepath: s3://${globals:s3_bucket_name}/ticketmaster_project/kedro_datasets/${globals:client_name}_kedro_datasets/data/04_feature/efc_outputs/daily_event_features_df.parquet
+
