@@ -1,0 +1,4 @@
+home_stadium_params:
+  capacity: 17250
+  postcode: 'TW8 0RU'
+  away_stands:    # TODO: Add list of away stands
